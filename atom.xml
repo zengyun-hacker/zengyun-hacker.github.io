@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Du&#39;s Time</title>
+  
+  <subtitle>Coding, thinking and maybe something else</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://codingtime.me/"/>
+  <updated>2018-07-15T16:13:13.056Z</updated>
+  <id>http://codingtime.me/</id>
+  
+  <author>
+    <name>Du</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用 iOS 10.3 新 API 给 app 更换 icon</title>
+    <link href="http://codingtime.me/2017/08/16/%E4%BD%BF%E7%94%A8iOS%2010.3%20%E6%96%B0%20API%20%E7%BB%99%20app%20%E6%9B%B4%E6%8D%A2%20icon/"/>
+    <id>http://codingtime.me/2017/08/16/使用iOS 10.3 新 API 给 app 更换 icon/</id>
+    <published>2017-08-16T15:26:58.000Z</published>
+    <updated>2018-07-15T16:13:13.056Z</updated>
+    
+    <content type="html"><![CDATA[<p>iOS 10.3 出来好长一段时间了，其中有一个换 icon 的 API <code>setAlternateIconName</code> 感觉挺好玩的一直想试一把。实验结果如下。</p><ol><li>首先准备好几个icon，根据苹果爸爸的要求，icon 2x 图尺寸为 120x120，3x 图尺寸为 180x180。</li><li><p>把这几个 icon 拖到工程中，这里有几个注意点：</p><ol><li>图片直接当做资源拖到工程中，不要放到Assets里</li><li>如果之前app的icon是用Assets管理的，把Assets里的AppIcon删掉，并把 Target -&gt; General -&gt; App Icons and Launch Images 里的 App Icon Source 改成 Don’t use assets catalogs<br><img src="media/15028867535241.jpg" alt=""></li></ol></li></ol><ol start="3"><li><p>在 <code>Info.plis</code> 中加入以下字段，<code>CFBundleAlternateIcons</code>字段部分</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&lt;key&gt;supportsAlternateIcons&lt;/key&gt;</span><br><span class="line">&lt;true/&gt;</span><br><span class="line">&lt;key&gt;CFBundleIcons&lt;/key&gt;</span><br><span class="line">&lt;dict&gt;</span><br><span class="line">&lt;key&gt;CFBundlePrimaryIcon&lt;/key&gt;</span><br><span class="line">&lt;dict&gt;</span><br><span class="line">&lt;key&gt;CFBundleIconFiles&lt;/key&gt;</span><br><span class="line">&lt;array&gt;</span><br><span class="line">&lt;string&gt;主icon文件名，不带后缀&lt;/string&gt;</span><br><span class="line">&lt;/array&gt;</span><br><span class="line">&lt;key&gt;UIPrerenderedIcon&lt;/key&gt;</span><br><span class="line">&lt;false/&gt;</span><br><span class="line">&lt;/dict&gt;</span><br><span class="line">&lt;key&gt;CFBundleAlternateIcons&lt;/key&gt;</span><br><span class="line">&lt;dict&gt;</span><br><span class="line">&lt;key&gt;此处填入自定义icon的文件名，不带后缀&lt;/key&gt;</span><br><span class="line">&lt;dict&gt;</span><br><span class="line">&lt;key&gt;CFBundleIconFiles&lt;/key&gt;</span><br><span class="line">&lt;array&gt;</span><br><span class="line">&lt;string&gt;此处填入自定义icon的文件名，不带后缀&lt;/string&gt;</span><br><span class="line">&lt;/array&gt;</span><br><span class="line">&lt;key&gt;UIPrerenderedIcon&lt;/key&gt;</span><br><span class="line">&lt;false/&gt;</span><br><span class="line">&lt;/dict&gt;</span><br><span class="line">&lt;key&gt;此处填入另一个自定义icon的文件名&lt;/key&gt;</span><br><span class="line">&lt;dict&gt;</span><br><span class="line">&lt;key&gt;CFBundleIconFiles&lt;/key&gt;</span><br><span class="line">&lt;array&gt;</span><br><span class="line">&lt;string&gt;此处填入另一个自定义icon的文件名&lt;/string&gt;</span><br><span class="line">&lt;/array&gt;</span><br><span class="line">&lt;key&gt;UIPrerenderedIcon&lt;/key&gt;</span><br><span class="line">&lt;false/&gt;</span><br><span class="line">&lt;/dict&gt;</span><br><span class="line">&lt;/dict&gt;</span><br><span class="line">&lt;/dict&gt;</span><br></pre></td></tr></table></figure></li><li><p>在代码中调用 <code>setAlternateIconName</code> 更换icon</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//Swift版本</span><br><span class="line">UIApplication.shared.setAlternateIconName(iconName, completionHandler: &#123; (error) in</span><br><span class="line">              if let error = error &#123;</span><br><span class="line">                  print(error.localizedDescription)</span><br><span class="line">              &#125;</span><br><span class="line">          &#125;)</span><br></pre></td></tr></table></figure><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Objective-C 版本</span></span><br><span class="line"> [[<span class="built_in">UIApplication</span> sharedApplication] setAlternateIconName:<span class="string">@"icon_new"</span> completionHandler:^(<span class="built_in">NSError</span> * _Nullable error) &#123;</span><br><span class="line">      <span class="built_in">NSLog</span>(<span class="string">@"error = %@"</span>, error.localizedDescription);</span><br><span class="line">  &#125;];</span><br></pre></td></tr></table></figure></li></ol><p>  调用成功之后，系统会自动弹出 icon 更换的提示框<br>  <img src="media/15028870063460.jpg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;iOS 10.3 出来好长一段时间了，其中有一个换 icon 的 API &lt;code&gt;setAlternateIconName&lt;/code&gt; 感觉挺好玩的一直想试一把。实验结果如下。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;首先准备好几个icon，根据苹果爸爸的要求，icon 2x 图尺
+      
+    
+    </summary>
+    
+    
+      <category term="iOS" scheme="http://codingtime.me/tags/iOS/"/>
+    
+      <category term="开发" scheme="http://codingtime.me/tags/%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
+  
+</feed>
