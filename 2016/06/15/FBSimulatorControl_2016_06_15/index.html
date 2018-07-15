@@ -15,7 +15,7 @@
     <meta name="description" content="">
     <meta name="Cache-Control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>Du&#39;s Time</title>
+    <title>使用FBSimulatorControl做模拟器适配测试 · Du&#39;s Time</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -70,6 +70,8 @@
 
     <link rel="preload" href= /css/style.css?v=20180709 as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <link rel="stylesheet" href= /css/mobile.css?v=20180709 media="(max-width: 980px)">
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
@@ -194,12 +196,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >Du&#39;s Time</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">使用FBSimulatorControl做模拟器适配测试</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>Du's Time</a>
 </header>
@@ -213,24 +226,74 @@
 
 
 
+height:50vh;
+
 >
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            使用FBSimulatorControl做模拟器适配测试
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "iOS">iOS</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>Word count: <span class="post-count">375</span> / Reading time: <span class="post-count">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2016/06/15</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -331,110 +394,63 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2017/08/16/使用iOS 10.3 新 API 给 app 更换 icon/" >
-            
-                <span>使用 iOS 10.3 新 API 给 app 更换 icon</span>
-        </a>
-        <div class="abstract-content">
-            iOS 10.3 出来好长一段时间了，其中有一个换 icon 的 API setAlternateIconName 感觉挺好玩的一直想试一把。实验结果如下。
-
-首先准备好几个icon，根据苹果爸爸的要求，icon 2x 图尺寸为 120x120，3x 图尺寸为 180x180。
-把这几个 icon 拖到工程中，这里有几个注意点：
-
-图片直接当做资源拖到工程中，不要放到Assets里
-如果之前app的icon是用Assets管理的，把Assets里的AppIcon删掉，并把 Target -&gt; General -&gt; App Icons and Launch Images 里的 ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/08/16</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "iOS">iOS</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "开发">开发</a>
-    
-</div>
-            
-        </div>
+            <main class="main post-page">
+    <article class="article-entry">
+        <p>作为一只iOS狗，虽然需要适配的屏幕有限，但每次适配自测的时候都挨个去启动N个模拟器也是很心塞。放狗搜到Facebook爸爸在15年的时候就搞了个<code>FBSimulatorControl</code>库支持同时启动多个模拟器，鉴于网上中文配置<code>FBSimulatorControl</code>的教程比较少。于是将自己的探索过程记录一下。</p>
+<h2 id="安装FBSimulatorControl小工具"><a href="#安装FBSimulatorControl小工具" class="headerlink" title="安装FBSimulatorControl小工具"></a>安装FBSimulatorControl小工具</h2><p>首先要加入Facebook Tap<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew tap facebook/fb</span><br></pre></td></tr></table></figure></p>
+<p>然后正常brew安装就行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install fbsimctl --HEAD</span><br></pre></td></tr></table></figure></p>
+<h2 id="启动多个模拟器"><a href="#启动多个模拟器" class="headerlink" title="启动多个模拟器"></a>启动多个模拟器</h2><p>首先先看看自己有哪些模拟器，执行<code>fbsimctl list</code>查看自己模拟器列表。<br>然后从列表里挑选自己喜欢的，执行<code>fbsimctl xxx xxx xxx boot</code>即可启动这些服务器。其中xxx是刚刚列表中的设备编号，如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fbsimctl 58B41543-C744-40FC-95E8-D47084A45B1F F36F486A-1B53-4B5B-BF3E-F3F50F5CCA99 D329D8D6-EBB6-4FDF-865E-063F67D45CA1 boot</span><br></pre></td></tr></table></figure>
+<h2 id="安装app"><a href="#安装app" class="headerlink" title="安装app"></a>安装app</h2><p>找到要测试的应用的<code>app</code>文件或<code>ipa</code>文件的路径，输入以下命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fbsimctl install SomeApp.app</span><br></pre></td></tr></table></figure>
+<p>app即可被安装</p>
+<h2 id="启动应用"><a href="#启动应用" class="headerlink" title="启动应用"></a>启动应用</h2><p>找到你需要安装的应用的<code>.app</code>文件地址，执行<code>fbsimctl install xxx.app</code>，此处xxx需替换成你的app文件名称，执行完后你的app就已经安装到各个模拟器上了。<br>接着执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fbsimctl launch 此处填入你app的bundleID</span><br></pre></td></tr></table></figure></p>
+<p>所有模拟器上的app就被启动了。接下来你就可以愉快地在各个分辨率里戳戳戳了~</p>
+<h2 id="One-more-thing"><a href="#One-more-thing" class="headerlink" title="One more thing"></a>One more thing</h2>
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2017/03/08/如何获取UIWebView请求时的HTTP状态码/" >
-            
-                <span>如何获取UIWebView请求时的HTTP状态码</span>
-        </a>
-        <div class="abstract-content">
-            有时我们需要向前端一样为请求错误的UIWebView界面添加更好看的本地错误提示，这就需要获取到UIWebView请求网页的HTTP状态码，基本思路是在webView请求结束后获取到缓存中的response，再根据response的statusCode进行判断，因此截获操作应该在UIWebViewDelegate中的webViewDidFinishLoad方法中进行
-12345678910- (void)webViewDidFinishLoad:(UIWebView *)webView&#123;	...	//获取status code	NSHTTPURLResponse *respon...
+        <div class="license-wrapper">
+            <p>原文作者: <a href="http://codingtime.me">Du</a>
+            <p>原文链接: <a href="http://codingtime.me/2016/06/15/FBSimulatorControl_2016_06_15/">http://codingtime.me/2016/06/15/FBSimulatorControl_2016_06_15/</a>
+            <p>发表日期: <a href="http://codingtime.me/2016/06/15/FBSimulatorControl_2016_06_15/">June 15th 2016, 11:26:58 pm</a>
+            <p>版权声明: 本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/03/08</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "iOS">iOS</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2017/01/29/Taptic Engine初探/" >
-            
-                <span>Taptic Engine初探</span>
-        </a>
-        <div class="abstract-content">
-            
-感谢组织过年借我只iPhone 7P，赶紧呈上一篇Taptic Engine报答组织
-
-简述Taptic Engine 是苹果的触觉反馈技术，其中Taptic演变自Haptic，即触觉。Taptic Engine目前已经应用在苹果全线设备中。它让Apple Watch震动时有手腕被人拍了一下的感觉。让MacBook触摸板有以假乱真的触感（Force Touch）。而在iPhone上，除了实现了3D Touch让屏幕多了一维交互外，还实现了虚拟Home键的反馈效果，甚至还提供了一套Taptic API供开发者实现自己的震动反馈。
-何时使用触摸反馈为了保证所有app体验的一致性，苹果总结了...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/01/29</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "iOS">iOS</a>
-    
-</div>
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/2016/06/28/mac工具推荐/" title= macOS 配置手册 >
+                    <div class="nextTitle">macOS 配置手册</div>
+                </a>
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2016/03/22/view controller 与 view 依赖关系探讨/" title= view controller 与 view 依赖关系探讨 >
+                    <div class="prevTitle">view controller 与 view 依赖关系探讨</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!--PC和WAP自适应版-->
+
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -512,6 +528,24 @@
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装FBSimulatorControl小工具"><span class="toc-number">1.</span> <span class="toc-text">安装FBSimulatorControl小工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#启动多个模拟器"><span class="toc-number">2.</span> <span class="toc-text">启动多个模拟器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装app"><span class="toc-number">3.</span> <span class="toc-text">安装app</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#启动应用"><span class="toc-number">4.</span> <span class="toc-text">启动应用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#One-more-thing"><span class="toc-number">5.</span> <span class="toc-text">One more thing</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -772,6 +806,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>

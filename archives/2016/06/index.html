@@ -339,31 +339,28 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2017/08/16/使用iOS 10.3 新 API 给 app 更换 icon/" >
+        <a class="abstract-title" href = "/2016/06/28/mac工具推荐/" >
             
-                <span>使用 iOS 10.3 新 API 给 app 更换 icon</span>
+                <span>macOS 配置手册</span>
         </a>
         <div class="abstract-content">
-            iOS 10.3 出来好长一段时间了，其中有一个换 icon 的 API setAlternateIconName 感觉挺好玩的一直想试一把。实验结果如下。
+            常用快捷键苹果官方文档对Mac的快捷键总结的非常全面。如果一定要给文档勾个重点的话，强烈建议记下常用的“文稿快捷键”，这些快捷键几乎可以在所有的文本框中使用，能极大提高编码效率。
+系统设置触摸板
+开启轻点需要按下才能单击的默认设置太不人性化了，开启“轻点来点按”，只要轻轻拍一下触摸板就能代替鼠标点击。开启方法：系统偏好设置-&gt;触摸板，将下图的选项勾上
+ 
 
-首先准备好几个icon，根据苹果爸爸的要求，icon 2x 图尺寸为 120x120，3x 图尺寸为 180x180。
-把这几个 icon 拖到工程中，这里有几个注意点：
-
-图片直接当做资源拖到工程中，不要放到Assets里
-如果之前app的icon是用Assets管理的，把Assets里的AppIcon删掉，并把 Target -&gt; General -&gt; App Icons and Launch Images 里的 ...
+开启三指拖拽默认的触摸板拖拽设置吃力的不行，一边按住触摸板一边移动手指的操作简直反人类。好在macOS可以用三指拖拽来代替按压拖拽，开启之后拖拽体验不输鼠标。开启方式：系统偏好设置-&gt;辅助功能，然后在左侧列表里选择“鼠标与...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/08/16</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/06/28</span>
             </div>
             <!-- tags  -->
             
             <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "iOS">iOS</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "开发">开发</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "macOS">macOS</a>
     
 </div>
             
@@ -376,51 +373,20 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2017/03/08/如何获取UIWebView请求时的HTTP状态码/" >
+        <a class="abstract-title" href = "/2016/06/15/FBSimulatorControl_2016_06_15/" >
             
-                <span>如何获取UIWebView请求时的HTTP状态码</span>
+                <span>使用FBSimulatorControl做模拟器适配测试</span>
         </a>
         <div class="abstract-content">
-            有时我们需要向前端一样为请求错误的UIWebView界面添加更好看的本地错误提示，这就需要获取到UIWebView请求网页的HTTP状态码，基本思路是在webView请求结束后获取到缓存中的response，再根据response的statusCode进行判断，因此截获操作应该在UIWebViewDelegate中的webViewDidFinishLoad方法中进行
-12345678910- (void)webViewDidFinishLoad:(UIWebView *)webView&#123;	...	//获取status code	NSHTTPURLResponse *respon...
+            作为一只iOS狗，虽然需要适配的屏幕有限，但每次适配自测的时候都挨个去启动N个模拟器也是很心塞。放狗搜到Facebook爸爸在15年的时候就搞了个FBSimulatorControl库支持同时启动多个模拟器，鉴于网上中文配置FBSimulatorControl的教程比较少。于是将自己的探索过程记录一下。
+安装FBSimulatorControl小工具首先要加入Facebook Tap1brew tap facebook/fb
+然后正常brew安装就行1brew install fbsimctl --HEAD
+启动多个模拟器首先先看看自己有哪些模拟器，执行fbsimctl list查看自己...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/03/08</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "iOS">iOS</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2017/01/29/Taptic Engine初探/" >
-            
-                <span>Taptic Engine初探</span>
-        </a>
-        <div class="abstract-content">
-            
-感谢组织过年借我只iPhone 7P，赶紧呈上一篇Taptic Engine报答组织
-
-简述Taptic Engine 是苹果的触觉反馈技术，其中Taptic演变自Haptic，即触觉。Taptic Engine目前已经应用在苹果全线设备中。它让Apple Watch震动时有手腕被人拍了一下的感觉。让MacBook触摸板有以假乱真的触感（Force Touch）。而在iPhone上，除了实现了3D Touch让屏幕多了一维交互外，还实现了虚拟Home键的反馈效果，甚至还提供了一套Taptic API供开发者实现自己的震动反馈。
-何时使用触摸反馈为了保证所有app体验的一致性，苹果总结了...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/01/29</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/06/15</span>
             </div>
             <!-- tags  -->
             

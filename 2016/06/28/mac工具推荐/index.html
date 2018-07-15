@@ -15,7 +15,7 @@
     <meta name="description" content="">
     <meta name="Cache-Control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>使用 iOS 10.3 新 API 给 app 更换 icon · Du&#39;s Time</title>
+    <title>macOS 配置手册 · Du&#39;s Time</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -210,7 +210,7 @@
                 <a href="/" >Du&#39;s Time</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">使用 iOS 10.3 新 API 给 app 更换 icon</a>
+                <a href="#" class="post-name">macOS 配置手册</a>
             </div>
     </div>
     
@@ -242,7 +242,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            使用 iOS 10.3 新 API 给 app 更换 icon
+            macOS 配置手册
             <!-- 404 -->
             
         </h1>
@@ -261,20 +261,18 @@ height:50vh;
                 
                     <div class= post-intro-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "iOS">iOS</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "开发">开发</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "macOS">macOS</a>
     
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count">405</span> / Reading time: <span class="post-count">2 min</span></span>
+                        <span>Word count: <span class="post-count">1,753</span> / Reading time: <span class="post-count">6 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2017/08/16</span>
+                    <span class="post-intro-time">2016/06/28</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -398,34 +396,56 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <p>iOS 10.3 出来好长一段时间了，其中有一个换 icon 的 API <code>setAlternateIconName</code> 感觉挺好玩的一直想试一把。实验结果如下。</p>
+        <h2 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h2><p><a href="https://support.apple.com/zh-cn/HT201236" target="_blank" rel="noopener">苹果官方文档</a>对Mac的快捷键总结的非常全面。如果一定要给文档勾个重点的话，强烈建议记下常用的“文稿快捷键”，这些快捷键几乎可以在所有的文本框中使用，能极大提高编码效率。</p>
+<h2 id="系统设置"><a href="#系统设置" class="headerlink" title="系统设置"></a>系统设置</h2><h3 id="触摸板"><a href="#触摸板" class="headerlink" title="触摸板"></a>触摸板</h3><ol>
+<li><p>开启轻点<br>需要按下才能单击的默认设置太不人性化了，开启“轻点来点按”，只要轻轻拍一下触摸板就能代替鼠标点击。<br>开启方法：系统偏好设置-&gt;触摸板，将下图的选项勾上</p>
+<p> <img src="../images/23-36-50.jpg" alt=""></p>
+</li>
+<li><p>开启三指拖拽<br>默认的触摸板拖拽设置吃力的不行，一边按住触摸板一边移动手指的操作简直反人类。好在macOS可以用三指拖拽来代替按压拖拽，开启之后拖拽体验不输鼠标。<br>开启方式：系统偏好设置-&gt;辅助功能，然后在左侧列表里选择“鼠标与触摸板”，然后再点击触摸板选项，勾上启用拖移，并在下拉菜单中选择三指拖移。<br>设置好之后，拖移只需要三指滑动就好，不再需要按压啦。<br><img src="../images/23-50-46.jpg" alt=""></p>
+</li>
+</ol>
+<h2 id="生产力工具"><a href="#生产力工具" class="headerlink" title="生产力工具"></a>生产力工具</h2><h3 id="SpotLight"><a href="#SpotLight" class="headerlink" title="SpotLight"></a>SpotLight</h3><p>Spotlight可以说是macOS最大优点，全局文件搜索不能再方便，妈妈再也不用担心我找不到文件了。</p>
+<h3 id="Alfred"><a href="#Alfred" class="headerlink" title="Alfred"></a>Alfred</h3><p>App启动工具，看上去跟SpotLight很像但绝对不仅仅是Spotlight，购买了power package之后就像是打开了新世界的大门，配合不同的workflow让常用操作更加便捷。<br><a href="https://www.zhihu.com/question/20656680" target="_blank" rel="noopener">Alfred workflow玩法戳这里</a></p>
+<h3 id="LaunchBar"><a href="#LaunchBar" class="headerlink" title="LaunchBar"></a>LaunchBar</h3><p>一样是App启动工具，跟Alfred发展方向不太一样，两者各有千秋。虽然我比较喜欢Alfred，但也看到过同事LaunchBar用的行云流水。建议大家两个都体验下，看自己喜好选其一。</p>
+<h3 id="OmniFocus"><a href="#OmniFocus" class="headerlink" title="OmniFocus"></a>OmniFocus</h3><p>任务管理软件。在试用过市面上几乎所有主流任务管理软件之后投靠了OmniFocus的怀抱。除了Inbox、Context、Project等GTD基本功能以外，OmniFocus还有预测、Review、无限分级、聚焦等无比好用的独有功能，作为一只GTD重度用户，在使用的过程中的的确确能体会到OmniFocus对GTD独到的理解。<br>附<a href="http://www.mifengtd.cn/articles/omnifocus-1.html" target="_blank" rel="noopener">OmniFocus设置教程</a>。<br>如果你只是轻度任务管理用户，觉得要学习半天才能上手的OmniFocus过于复杂，<a href="https://www.wunderlist.com/zh/" target="_blank" rel="noopener">奇妙清单</a>或者<a href="https://culturedcode.com/things/" target="_blank" rel="noopener">Things</a>也是不错的选择。</p>
+<h2 id="命令行工具"><a href="#命令行工具" class="headerlink" title="命令行工具"></a>命令行工具</h2><h3 id="iTerm2"><a href="#iTerm2" class="headerlink" title="iTerm2"></a><a href="https://www.iterm2.com" target="_blank" rel="noopener">iTerm2</a></h3><p>加强版终端，妥妥的吊打系统自带终端。支持标签页、可设置主题、可分屏、各种快捷键操作、支持选中即复制、自动补全、记录粘贴历史……</p>
+<h3 id="oh-my-zsh"><a href="#oh-my-zsh" class="headerlink" title="oh-my-zsh"></a><a href="https://github.com/robbyrussell/oh-my-zsh" target="_blank" rel="noopener">oh-my-zsh</a></h3><p>比bash更好用的shell，兼容bash、更强大的补全、支持各种主题、支持显示git分支、支持各种插件，zsh的优点简直要说两天两夜，反正zsh我是走到哪装到哪，哪台电脑上没zsh我用起来就浑身不舒服。</p>
+<h3 id="HomeBrew"><a href="#HomeBrew" class="headerlink" title="HomeBrew"></a><a href="http://brew.sh/" target="_blank" rel="noopener">HomeBrew</a></h3><p>包管理工具，有了它安装命令行工具更方便。</p>
+<h3 id="Homebrew-Cask"><a href="#Homebrew-Cask" class="headerlink" title="Homebrew Cask"></a><a href="https://caskroom.github.io" target="_blank" rel="noopener">Homebrew Cask</a></h3><p>基于homebrew的软件安装工具。没有Homebrew Cask之前安装Chrome需要三步：</p>
 <ol>
-<li>首先准备好几个icon，根据苹果爸爸的要求，icon 2x 图尺寸为 120x120，3x 图尺寸为 180x180。</li>
-<li><p>把这几个 icon 拖到工程中，这里有几个注意点：</p>
-<ol>
-<li>图片直接当做资源拖到工程中，不要放到Assets里</li>
-<li>如果之前app的icon是用Assets管理的，把Assets里的AppIcon删掉，并把 Target -&gt; General -&gt; App Icons and Launch Images 里的 App Icon Source 改成 Don’t use assets catalogs<br><img src="media/15028867535241.jpg" alt=""></li>
+<li>去Chrome主页</li>
+<li>下载Chrome安装包</li>
+<li>打开安装包</li>
 </ol>
-</li>
-</ol>
-<ol start="3">
-<li><p>在 <code>Info.plis</code> 中加入以下字段，<code>CFBundleAlternateIcons</code>字段部分</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&lt;key&gt;supportsAlternateIcons&lt;/key&gt;</span><br><span class="line">&lt;true/&gt;</span><br><span class="line">&lt;key&gt;CFBundleIcons&lt;/key&gt;</span><br><span class="line">&lt;dict&gt;</span><br><span class="line">	&lt;key&gt;CFBundlePrimaryIcon&lt;/key&gt;</span><br><span class="line">	&lt;dict&gt;</span><br><span class="line">		&lt;key&gt;CFBundleIconFiles&lt;/key&gt;</span><br><span class="line">		&lt;array&gt;</span><br><span class="line">			&lt;string&gt;主icon文件名，不带后缀&lt;/string&gt;</span><br><span class="line">		&lt;/array&gt;</span><br><span class="line">		&lt;key&gt;UIPrerenderedIcon&lt;/key&gt;</span><br><span class="line">		&lt;false/&gt;</span><br><span class="line">	&lt;/dict&gt;</span><br><span class="line">	&lt;key&gt;CFBundleAlternateIcons&lt;/key&gt;</span><br><span class="line">	&lt;dict&gt;</span><br><span class="line">		&lt;key&gt;此处填入自定义icon的文件名，不带后缀&lt;/key&gt;</span><br><span class="line">		&lt;dict&gt;</span><br><span class="line">			&lt;key&gt;CFBundleIconFiles&lt;/key&gt;</span><br><span class="line">			&lt;array&gt;</span><br><span class="line">				&lt;string&gt;此处填入自定义icon的文件名，不带后缀&lt;/string&gt;</span><br><span class="line">			&lt;/array&gt;</span><br><span class="line">			&lt;key&gt;UIPrerenderedIcon&lt;/key&gt;</span><br><span class="line">			&lt;false/&gt;</span><br><span class="line">		&lt;/dict&gt;</span><br><span class="line">		&lt;key&gt;此处填入另一个自定义icon的文件名&lt;/key&gt;</span><br><span class="line">		&lt;dict&gt;</span><br><span class="line">			&lt;key&gt;CFBundleIconFiles&lt;/key&gt;</span><br><span class="line">			&lt;array&gt;</span><br><span class="line">				&lt;string&gt;此处填入另一个自定义icon的文件名&lt;/string&gt;</span><br><span class="line">			&lt;/array&gt;</span><br><span class="line">			&lt;key&gt;UIPrerenderedIcon&lt;/key&gt;</span><br><span class="line">			&lt;false/&gt;</span><br><span class="line">		&lt;/dict&gt;</span><br><span class="line">	&lt;/dict&gt;</span><br><span class="line">&lt;/dict&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在代码中调用 <code>setAlternateIconName</code> 更换icon</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//Swift版本</span><br><span class="line">UIApplication.shared.setAlternateIconName(iconName, completionHandler: &#123; (error) in</span><br><span class="line">              if let error = error &#123;</span><br><span class="line">                  print(error.localizedDescription)</span><br><span class="line">              &#125;</span><br><span class="line">          &#125;)</span><br></pre></td></tr></table></figure>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Objective-C 版本</span></span><br><span class="line"> [[<span class="built_in">UIApplication</span> sharedApplication] setAlternateIconName:<span class="string">@"icon_new"</span> completionHandler:^(<span class="built_in">NSError</span> * _Nullable error) &#123;</span><br><span class="line">      <span class="built_in">NSLog</span>(<span class="string">@"error = %@"</span>, error.localizedDescription);</span><br><span class="line">  &#125;];</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>  调用成功之后，系统会自动弹出 icon 更换的提示框<br>  <img src="media/15028870063460.jpg" alt=""></p>
+<p>有了Homebrew Cask只需要一部：执行<code>brew cask install goole-chrome</code>。不过需要注意的是brew cask安装的软件需要用<code>brew cask uninstall</code>进行删除。<br>另外brew cask也有GUI版，叫<a href="https://www.cakebrew.com/" target="_blank" rel="noopener">Cakebrew</a>。</p>
+<h2 id="系统工具"><a href="#系统工具" class="headerlink" title="系统工具"></a>系统工具</h2><h3 id="Clean-My-Mac"><a href="#Clean-My-Mac" class="headerlink" title="Clean My Mac"></a><a href="http://macpaw.com/cleanmymac" target="_blank" rel="noopener">Clean My Mac</a></h3><p>磁盘清理工具，在Mac电脑大部分都是SSD，硬盘空间紧张的情况下，这类工具还是挺有用的。另外强力卸载软件的功能在关键时候能帮上大忙。</p>
+<h2 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h2><h3 id="Command-Line-Tools"><a href="#Command-Line-Tools" class="headerlink" title="Command Line Tools"></a><a href="https://developer.apple.com/library/ios/technotes/tn2339/_index.html" target="_blank" rel="noopener">Command Line Tools</a></h3><p>苹果家出的一个命令行工具集，包括了前后端需要的一个基本命令行工具包，比如git啦、xcodebuild啦、node-gyp啦，许多命令行工具（比如homebrew）都依赖Command Line Tools。<br>在命令行中输入<code>xcode-select --install</code>，即可开始安装。</p>
+<h3 id="Dash"><a href="#Dash" class="headerlink" title="Dash"></a>Dash</h3><p><img src="../images/00-54-05.jpg" alt=""></p>
+<p>开发文档查询工具。虽然看上去这就是个文档集合小工具，可以帮你离线各种文档并提供搜索功能，但是配合Alfred查起API来真心感觉方便，谁用谁知道 :) 免费版启动和查询的时候都需要等待几秒，为了提高开发效率，建议付费。（貌似经常打折所以也不贵 =。=）</p>
+<h3 id="OmniPlan"><a href="#OmniPlan" class="headerlink" title="OmniPlan"></a><a href="https://www.omnigroup.com/omniplan" target="_blank" rel="noopener">OmniPlan</a></h3><p>项目计划工具，类似于Windows下的Project。讲真Omni出品必属精品，平常做项目计划所需要的所有功能都能在OmniPlan下找到，除了贵没啥缺点，反正我是没在Mac下面看到比这更好用的项目计划软件了。</p>
+<h3 id="SourceTree"><a href="#SourceTree" class="headerlink" title="SourceTree"></a><a href="https://www.sourcetreeapp.com/" target="_blank" rel="noopener">SourceTree</a></h3><p>免费而功能强大的Git图形化工具。各种功能都有也支持git flow，除了偶尔不稳定要重启以外没要求了。</p>
+<h3 id="Charles"><a href="#Charles" class="headerlink" title="Charles"></a><a href="https://www.charlesproxy.com/" target="_blank" rel="noopener">Charles</a></h3><p>简单好用的http抓包工具，支持抓取https请求，除了抓包也可以拦截修改请求。免费版也能用，就是启动要等几秒，且每隔30分钟要强制关闭一次。</p>
+<h2 id="编辑器"><a href="#编辑器" class="headerlink" title="编辑器"></a>编辑器</h2><h3 id="Sublime-Text"><a href="#Sublime-Text" class="headerlink" title="Sublime Text"></a><a href="https://www.sublimetext.com" target="_blank" rel="noopener">Sublime Text</a></h3><p>老牌编辑器，前端同学都用它。实测打开80M的文本文件，Visual Studio Code和Atom都挂了只有Sublime能打开。</p>
+<h3 id="Atom"><a href="#Atom" class="headerlink" title="Atom"></a><a href="https://atom.io/" target="_blank" rel="noopener">Atom</a></h3><p>Github家的出品，使用CoffeeScript，对前端最友好，自带git，插件众多。</p>
+<h3 id="Visual-Studio-Code"><a href="#Visual-Studio-Code" class="headerlink" title="Visual Studio Code"></a><a href="https://code.visualstudio.com/" target="_blank" rel="noopener">Visual Studio Code</a></h3><p>和Atom一样是基于<code>Electron</code>，据说性能比Atom好很多，体验也不错，作为VS忠粉看到熟悉的配色表示很激动。</p>
+<h3 id="MacDown"><a href="#MacDown" class="headerlink" title="MacDown"></a><a href="http://macdown.uranusjr.com/" target="_blank" rel="noopener">MacDown</a></h3><p>开源markdown编辑器。作者受Mou影响较大，因此MacDown体验和Mou高度一致，对Mou失望的同学可以无缝迁移，稳定性也不错。</p>
+<h3 id="Mou"><a href="#Mou" class="headerlink" title="Mou"></a><a href="http://25.io/mou/" target="_blank" rel="noopener">Mou</a></h3><p>老牌markdown编辑器。有一点点不稳定且作者新版本一直在跳票 XD</p>
+<h2 id="小工具"><a href="#小工具" class="headerlink" title="小工具"></a>小工具</h2><h3 id="ClipMenu"><a href="#ClipMenu" class="headerlink" title="ClipMenu"></a><a href="http://www.clipmenu.com/" target="_blank" rel="noopener">ClipMenu</a></h3><p><img src="../images/00-54-32.jpg" alt=""></p>
+<p>剪贴板小工具，可以记录上20次剪贴板里的内容，在多次复制粘贴的时候非常好用。</p>
+<h3 id="iStat-Menus"><a href="#iStat-Menus" class="headerlink" title="iStat Menus"></a><a href="https://bjango.com/mac/istatmenus/" target="_blank" rel="noopener">iStat Menus</a></h3><p>系统状态显示软件，可以显示网络状态、CPU情况、内存使用情况等。</p>
+<h3 id="Bartender"><a href="#Bartender" class="headerlink" title="Bartender"></a><a href="https://www.macbartender.com" target="_blank" rel="noopener">Bartender</a></h3><p><img src="../images/00-40-33.jpg" alt=""><br>菜单图标管理软件，可以将右上角菜单栏的图标隐藏起来。安装的软件多了特别是有了iStat Menus之后，Bartender的意义就体现出来了。</p>
+<h3 id="1Password"><a href="#1Password" class="headerlink" title="1Password"></a>1Password</h3><p>密码管理工具。跟Last Password等工具不同的是1Password的密码文件是存储在本地的，感觉更安全，另外1Password的各种插件和工具做的都不错，买了1Password5还能免费升级到6，真·良心商家。</p>
+<h3 id="Irvue"><a href="#Irvue" class="headerlink" title="Irvue"></a>Irvue</h3><p>自动换壁纸，壁纸来源是高质量高分辨率照片分享网站 Unsplash，照片质量非常不错。</p>
+<h3 id="Surge"><a href="#Surge" class="headerlink" title="Surge"></a>Surge</h3><p>梯子，支持shadowsocks协议，支持全局自动翻。如果没有购买Surge iOS版的话，<a href="https://github.com/shadowsocks/shadowsocks-iOS/wiki/Shadowsocks-for-OSX-Help" target="_blank" rel="noopener">Shadowsocks </a>或者<a href="https://github.com/chenowen/GoAgentX-1" target="_blank" rel="noopener">GoAgentX</a>也是不错的选择。</p>
+<p>PS：写的过程中发现个不错的GitBook <a href="https://www.gitbook.com/book/aaaaaashu/mac-dev-setup/details" target="_blank" rel="noopener">Mac 开发配置手册</a><br>鸣谢：感谢小谁大人帮我打开Mac大门~</p>
 
     </article>
     <!-- license  -->
     
         <div class="license-wrapper">
             <p>原文作者: <a href="http://codingtime.me">Du</a>
-            <p>原文链接: <a href="http://codingtime.me/2017/08/16/使用iOS 10.3 新 API 给 app 更换 icon/">http://codingtime.me/2017/08/16/使用iOS 10.3 新 API 给 app 更换 icon/</a>
-            <p>发表日期: <a href="http://codingtime.me/2017/08/16/使用iOS 10.3 新 API 给 app 更换 icon/">August 16th 2017, 11:26:58 pm</a>
+            <p>原文链接: <a href="http://codingtime.me/2016/06/28/mac工具推荐/">http://codingtime.me/2016/06/28/mac工具推荐/</a>
+            <p>发表日期: <a href="http://codingtime.me/2016/06/28/mac工具推荐/">June 28th 2016, 5:53:00 pm</a>
             <p>版权声明: 本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -433,12 +453,17 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/2016/07/01/weak-strong dance的另外一种解释/" title= weak-strong dance的另外一种解释 >
+                    <div class="nextTitle">weak-strong dance的另外一种解释</div>
+                </a>
+            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2017/03/08/如何获取UIWebView请求时的HTTP状态码/" title= 如何获取UIWebView请求时的HTTP状态码 >
-                    <div class="prevTitle">如何获取UIWebView请求时的HTTP状态码</div>
+                <a href= "/2016/06/15/FBSimulatorControl_2016_06_15/" title= 使用FBSimulatorControl做模拟器适配测试 >
+                    <div class="prevTitle">使用FBSimulatorControl做模拟器适配测试</div>
                 </a>
             
         </li>
@@ -551,7 +576,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#常用快捷键"><span class="toc-number">1.</span> <span class="toc-text">常用快捷键</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#系统设置"><span class="toc-number">2.</span> <span class="toc-text">系统设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#触摸板"><span class="toc-number">2.1.</span> <span class="toc-text">触摸板</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#生产力工具"><span class="toc-number">3.</span> <span class="toc-text">生产力工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SpotLight"><span class="toc-number">3.1.</span> <span class="toc-text">SpotLight</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Alfred"><span class="toc-number">3.2.</span> <span class="toc-text">Alfred</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LaunchBar"><span class="toc-number">3.3.</span> <span class="toc-text">LaunchBar</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#OmniFocus"><span class="toc-number">3.4.</span> <span class="toc-text">OmniFocus</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#命令行工具"><span class="toc-number">4.</span> <span class="toc-text">命令行工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#iTerm2"><span class="toc-number">4.1.</span> <span class="toc-text">iTerm2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#oh-my-zsh"><span class="toc-number">4.2.</span> <span class="toc-text">oh-my-zsh</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HomeBrew"><span class="toc-number">4.3.</span> <span class="toc-text">HomeBrew</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Homebrew-Cask"><span class="toc-number">4.4.</span> <span class="toc-text">Homebrew Cask</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#系统工具"><span class="toc-number">5.</span> <span class="toc-text">系统工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Clean-My-Mac"><span class="toc-number">5.1.</span> <span class="toc-text">Clean My Mac</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开发工具"><span class="toc-number">6.</span> <span class="toc-text">开发工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Command-Line-Tools"><span class="toc-number">6.1.</span> <span class="toc-text">Command Line Tools</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Dash"><span class="toc-number">6.2.</span> <span class="toc-text">Dash</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#OmniPlan"><span class="toc-number">6.3.</span> <span class="toc-text">OmniPlan</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SourceTree"><span class="toc-number">6.4.</span> <span class="toc-text">SourceTree</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Charles"><span class="toc-number">6.5.</span> <span class="toc-text">Charles</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编辑器"><span class="toc-number">7.</span> <span class="toc-text">编辑器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Sublime-Text"><span class="toc-number">7.1.</span> <span class="toc-text">Sublime Text</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Atom"><span class="toc-number">7.2.</span> <span class="toc-text">Atom</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Visual-Studio-Code"><span class="toc-number">7.3.</span> <span class="toc-text">Visual Studio Code</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MacDown"><span class="toc-number">7.4.</span> <span class="toc-text">MacDown</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mou"><span class="toc-number">7.5.</span> <span class="toc-text">Mou</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#小工具"><span class="toc-number">8.</span> <span class="toc-text">小工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ClipMenu"><span class="toc-number">8.1.</span> <span class="toc-text">ClipMenu</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#iStat-Menus"><span class="toc-number">8.2.</span> <span class="toc-text">iStat Menus</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Bartender"><span class="toc-number">8.3.</span> <span class="toc-text">Bartender</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1Password"><span class="toc-number">8.4.</span> <span class="toc-text">1Password</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Irvue"><span class="toc-number">8.5.</span> <span class="toc-text">Irvue</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Surge"><span class="toc-number">8.6.</span> <span class="toc-text">Surge</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>

@@ -339,88 +339,21 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2017/08/16/使用iOS 10.3 新 API 给 app 更换 icon/" >
+        <a class="abstract-title" href = "/2016/03/22/view controller 与 view 依赖关系探讨/" >
             
-                <span>使用 iOS 10.3 新 API 给 app 更换 icon</span>
+                <span>view controller 与 view 依赖关系探讨</span>
         </a>
         <div class="abstract-content">
-            iOS 10.3 出来好长一段时间了，其中有一个换 icon 的 API setAlternateIconName 感觉挺好玩的一直想试一把。实验结果如下。
+            众所周知，从IB中拖出来的outlet Xcode会默认设置为weak，那么代码new出来并且addSubview到self.view的view，我们在property里要设置为strong还是weak呢。
+Weak or Strong?假设一个ViewController的self.view中有一个Label，那么他们三者的关系是：
 
-首先准备好几个icon，根据苹果爸爸的要求，icon 2x 图尺寸为 120x120，3x 图尺寸为 180x180。
-把这几个 icon 拖到工程中，这里有几个注意点：
-
-图片直接当做资源拖到工程中，不要放到Assets里
-如果之前app的icon是用Assets管理的，把Assets里的AppIcon删掉，并把 Target -&gt; General -&gt; App Icons and Launch Images 里的 ...
+可以看到Label的所有者其实是self.view，正常来说一个对象只有一个所有者，如果再将ViewController中的Label引用声明为strong，那么当label从self.view中移除后，label将不会销毁，造成View的冗余。
+于是我...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/08/16</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "iOS">iOS</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "开发">开发</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2017/03/08/如何获取UIWebView请求时的HTTP状态码/" >
-            
-                <span>如何获取UIWebView请求时的HTTP状态码</span>
-        </a>
-        <div class="abstract-content">
-            有时我们需要向前端一样为请求错误的UIWebView界面添加更好看的本地错误提示，这就需要获取到UIWebView请求网页的HTTP状态码，基本思路是在webView请求结束后获取到缓存中的response，再根据response的statusCode进行判断，因此截获操作应该在UIWebViewDelegate中的webViewDidFinishLoad方法中进行
-12345678910- (void)webViewDidFinishLoad:(UIWebView *)webView&#123;	...	//获取status code	NSHTTPURLResponse *respon...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/03/08</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "iOS">iOS</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2017/01/29/Taptic Engine初探/" >
-            
-                <span>Taptic Engine初探</span>
-        </a>
-        <div class="abstract-content">
-            
-感谢组织过年借我只iPhone 7P，赶紧呈上一篇Taptic Engine报答组织
-
-简述Taptic Engine 是苹果的触觉反馈技术，其中Taptic演变自Haptic，即触觉。Taptic Engine目前已经应用在苹果全线设备中。它让Apple Watch震动时有手腕被人拍了一下的感觉。让MacBook触摸板有以假乱真的触感（Force Touch）。而在iPhone上，除了实现了3D Touch让屏幕多了一维交互外，还实现了虚拟Home键的反馈效果，甚至还提供了一套Taptic API供开发者实现自己的震动反馈。
-何时使用触摸反馈为了保证所有app体验的一致性，苹果总结了...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/01/29</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/03/22</span>
             </div>
             <!-- tags  -->
             
