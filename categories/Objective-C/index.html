@@ -339,23 +339,23 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2017/08/16/使用iOS 10.3 新 API 给 app 更换 icon/" >
+        <a class="abstract-title" href = "/2016/07/02/weak变量性能低的原因/" >
             
-                <span>使用 iOS 10.3 新 API 给 app 更换 icon</span>
+                <span>weak变量性能低的原因</span>
         </a>
         <div class="abstract-content">
-            iOS 10.3 出来好长一段时间了，其中有一个换 icon 的 API setAlternateIconName 感觉挺好玩的一直想试一把。实验结果如下。
+            经常看到说weak变量性能低要少用，但就是没看到文章说明一下原因，于是我弱弱总结一下：
 
-首先准备好几个icon，根据苹果爸爸的要求，icon 2x 图尺寸为 120x120，3x 图尺寸为 180x180。
-把这几个 icon 拖到工程中，这里有几个注意点：
+weak变量使用时会生成autorelease临时变量，增加性能消耗
+所有weak变量都会被加入到weak散列表中，每次有内存释放时都会遍历这个散列表，置空所有的weak变量。如果weak变量太多，遍历散列表将变得非常耗时
 
-图片直接当做资源拖到工程中，不要放到Assets里
-如果之前app的icon是用Assets管理的，把Assets里的AppIcon删掉，并把 Target -&gt; General -&gt; App Icons and Launch Images 里的 ...
+参考资料：《Objective-C 高级编程》
+
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/08/16</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/07/02</span>
             </div>
             <!-- tags  -->
             
@@ -363,7 +363,71 @@
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "iOS">iOS</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "开发">开发</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Objective-C">Objective-C</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2016/07/01/weak-strong dance的另外一种解释/" >
+            
+                <span>weak-strong dance的另外一种解释</span>
+        </a>
+        <div class="abstract-content">
+            以下是一个标准的weak-strong dance1234567891011121314MyViewController *myController = [[MyViewController alloc] init];// ...MyViewController * __weak weakMyController = myController;myController.completionHandler = ^(NSInteger result) &#123;    MyViewController *strongMyController = weakMyController;     ...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/07/01</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "iOS">iOS</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Objective-C">Objective-C</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2016/03/22/view controller 与 view 依赖关系探讨/" >
+            
+                <span>view controller 与 view 依赖关系探讨</span>
+        </a>
+        <div class="abstract-content">
+            众所周知，从IB中拖出来的outlet Xcode会默认设置为weak，那么代码new出来并且addSubview到self.view的view，我们在property里要设置为strong还是weak呢。
+Weak or Strong?假设一个ViewController的self.view中有一个Label，那么他们三者的关系是：
+
+可以看到Label的所有者其实是self.view，正常来说一个对象只有一个所有者，如果再将ViewController中的Label引用声明为strong，那么当label从self.view中移除后，label将不会销毁，造成View的冗余。
+于是我...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/03/22</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "iOS">iOS</a>
     
 </div>
             
