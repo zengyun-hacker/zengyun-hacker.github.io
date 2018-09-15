@@ -354,6 +354,50 @@ height:50vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2018/09/15/build-fat-framework/" >
+            
+                <span>[Untitled Post]</span>
+        </a>
+        <div class="abstract-content">
+            如何打出同时支持真机和模拟器的 Framework
+创建一个 Framework 的 target，将需要的所有文件拖入 target 中
+
+先将目标设备选为真机，build，然后在 product 里找到打好的 framework
+
+再将目标设备选为模拟器，build，然后在 product 里找到打好的 framework
+
+执行 lipo 命令
+1lipo -create '真机版 frameworkd 的露囧' '模拟器版 framework 的路径' -output '新的framework的名称'
+生成的新 framework 就同时支持真机和模拟器架构了~
+
+
+相关资料：
+...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/09/15</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "iOS">iOS</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "编译">编译</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2017/08/16/使用iOS 10.3 新 API 给 app 更换 icon/" >
             
                 <span>使用 iOS 10.3 新 API 给 app 更换 icon</span>
@@ -905,9 +949,28 @@ Weak or Strong?假设一个ViewController的self.view中有一个Label，那么�
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 9
+        Total : 10
         </div>
         <!-- search  -->
         
@@ -917,6 +980,20 @@ Weak or Strong?假设一个ViewController的self.view中有一个Label，那么�
     
     
     
+    
+    <div class="archive-year"> 2018 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/15</span><a class="archive-post-title" href= "/2018/09/15/build-fat-framework/" >[Untitled Post]</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
     
     <div class="archive-year"> 2017 </div>
     <ul class="year-list">
@@ -982,6 +1059,8 @@ Weak or Strong?假设一个ViewController的self.view中有一个Label，那么�
     
         <span class="sidebar-tag-name" data-tags="iOS"><span class="iconfont-archer">&#xe606;</span>iOS</span>
     
+        <span class="sidebar-tag-name" data-tags="编译"><span class="iconfont-archer">&#xe606;</span>编译</span>
+    
         <span class="sidebar-tag-name" data-tags="macOS"><span class="iconfont-archer">&#xe606;</span>macOS</span>
     
         <span class="sidebar-tag-name" data-tags="Objective-C"><span class="iconfont-archer">&#xe606;</span>Objective-C</span>
@@ -1020,6 +1099,8 @@ jsonContent:
 </div>
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
+    
+        <span class="sidebar-category-name" data-categories="iOS周边知识"><span class="iconfont-archer">&#xe60a;</span>iOS周边知识</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>

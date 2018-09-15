@@ -339,23 +339,30 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2016/07/02/weak变量性能低的原因/" >
+        <a class="abstract-title" href = "/2018/09/15/build-fat-framework/" >
             
-                <span>weak变量性能低的原因</span>
+                <span>[Untitled Post]</span>
         </a>
         <div class="abstract-content">
-            经常看到说weak变量性能低要少用，但就是没看到文章说明一下原因，于是我弱弱总结一下：
+            如何打出同时支持真机和模拟器的 Framework
+创建一个 Framework 的 target，将需要的所有文件拖入 target 中
 
-weak变量使用时会生成autorelease临时变量，增加性能消耗
-所有weak变量都会被加入到weak散列表中，每次有内存释放时都会遍历这个散列表，置空所有的weak变量。如果weak变量太多，遍历散列表将变得非常耗时
+先将目标设备选为真机，build，然后在 product 里找到打好的 framework
 
-参考资料：《Objective-C 高级编程》
+再将目标设备选为模拟器，build，然后在 product 里找到打好的 framework
 
+执行 lipo 命令
+1lipo -create '真机版 frameworkd 的露囧' '模拟器版 framework 的路径' -output '新的framework的名称'
+生成的新 framework 就同时支持真机和模拟器架构了~
+
+
+相关资料：
+...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/07/02</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/09/15</span>
             </div>
             <!-- tags  -->
             
@@ -363,169 +370,7 @@ weak变量使用时会生成autorelease临时变量，增加性能消耗
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "iOS">iOS</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Objective-C">Objective-C</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2016/07/01/weak-strong dance的另外一种解释/" >
-            
-                <span>weak-strong dance的另外一种解释</span>
-        </a>
-        <div class="abstract-content">
-            以下是一个标准的weak-strong dance1234567891011121314MyViewController *myController = [[MyViewController alloc] init];// ...MyViewController * __weak weakMyController = myController;myController.completionHandler = ^(NSInteger result) &#123;    MyViewController *strongMyController = weakMyController;     ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/07/01</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "iOS">iOS</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Objective-C">Objective-C</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2016/06/28/mac工具推荐/" >
-            
-                <span>macOS 配置手册</span>
-        </a>
-        <div class="abstract-content">
-            常用快捷键苹果官方文档对Mac的快捷键总结的非常全面。如果一定要给文档勾个重点的话，强烈建议记下常用的“文稿快捷键”，这些快捷键几乎可以在所有的文本框中使用，能极大提高编码效率。
-系统设置触摸板
-开启轻点需要按下才能单击的默认设置太不人性化了，开启“轻点来点按”，只要轻轻拍一下触摸板就能代替鼠标点击。开启方法：系统偏好设置-&gt;触摸板，将下图的选项勾上
- 
-
-开启三指拖拽默认的触摸板拖拽设置吃力的不行，一边按住触摸板一边移动手指的操作简直反人类。好在macOS可以用三指拖拽来代替按压拖拽，开启之后拖拽体验不输鼠标。开启方式：系统偏好设置-&gt;辅助功能，然后在左侧列表里选择“鼠标与...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/06/28</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "macOS">macOS</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2016/06/15/FBSimulatorControl_2016_06_15/" >
-            
-                <span>使用FBSimulatorControl做模拟器适配测试</span>
-        </a>
-        <div class="abstract-content">
-            作为一只iOS狗，虽然需要适配的屏幕有限，但每次适配自测的时候都挨个去启动N个模拟器也是很心塞。放狗搜到Facebook爸爸在15年的时候就搞了个FBSimulatorControl库支持同时启动多个模拟器，鉴于网上中文配置FBSimulatorControl的教程比较少。于是将自己的探索过程记录一下。
-安装FBSimulatorControl小工具首先要加入Facebook Tap1brew tap facebook/fb
-然后正常brew安装就行1brew install fbsimctl --HEAD
-启动多个模拟器首先先看看自己有哪些模拟器，执行fbsimctl list查看自己...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/06/15</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "iOS">iOS</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2016/03/22/view controller 与 view 依赖关系探讨/" >
-            
-                <span>view controller 与 view 依赖关系探讨</span>
-        </a>
-        <div class="abstract-content">
-            众所周知，从IB中拖出来的outlet Xcode会默认设置为weak，那么代码new出来并且addSubview到self.view的view，我们在property里要设置为strong还是weak呢。
-Weak or Strong?假设一个ViewController的self.view中有一个Label，那么他们三者的关系是：
-
-可以看到Label的所有者其实是self.view，正常来说一个对象只有一个所有者，如果再将ViewController中的Label引用声明为strong，那么当label从self.view中移除后，label将不会销毁，造成View的冗余。
-于是我...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/03/22</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "iOS">iOS</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2016/02/29/溢出无处不在/" >
-            
-                <span>溢出无处不在</span>
-        </a>
-        <div class="abstract-content">
-            # 
-最近需要做个随机数，一般随机数不都是用时间戳作种子然后生成嘛，于是迅速写下以下代码
-1234567//取当前时间NSTimeInterval currentTime = [[NSDate date] timeIntervalSince1970];//将时间戳的精度取到毫秒级，减少种子雷同的概率NSTimeInterval timeStamp = (long)(currentTime * 1000);//srand要求timesrand((unsigned int)timeStamp);NSInteger randomNumber = rand();
-代码愉快地上线之后，居然有1/5...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/02/29</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "iOS">iOS</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "编译">编译</a>
     
 </div>
             
