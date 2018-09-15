@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://codingtime.me/"/>
-  <updated>2018-09-15T11:54:36.401Z</updated>
+  <updated>2018-09-15T12:01:30.632Z</updated>
   <id>http://codingtime.me/</id>
   
   <author>
@@ -17,19 +17,24 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>如何打出同时支持真机和模拟器的 Framework</title>
     <link href="http://codingtime.me/2018/09/15/build-fat-framework/"/>
     <id>http://codingtime.me/2018/09/15/build-fat-framework/</id>
     <published>2018-09-15T11:54:36.000Z</published>
-    <updated>2018-09-15T11:54:36.401Z</updated>
+    <updated>2018-09-15T12:01:30.632Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="如何打出同时支持真机和模拟器的-Framework"><a href="#如何打出同时支持真机和模拟器的-Framework" class="headerlink" title="如何打出同时支持真机和模拟器的 Framework"></a>如何打出同时支持真机和模拟器的 Framework</h1><ol><li><p>创建一个 Framework 的 target，将需要的所有文件拖入 target 中</p></li><li><p>先将目标设备选为真机，build，然后在 product 里找到打好的 framework</p></li><li><p>再将目标设备选为模拟器，build，然后在 product 里找到打好的 framework</p></li><li><p>执行 lipo 命令</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lipo -create '真机版 frameworkd 的露囧' '模拟器版 framework 的路径' -output '新的framework的名称'</span><br></pre></td></tr></table></figure><p>生成的新 framework 就同时支持真机和模拟器架构了~</p></li></ol><p>相关资料：</p><p><a href="https://stackoverflow.com/questions/29634466/how-to-export-fat-cocoa-touch-framework-for-simulator-and-device" target="_blank" rel="noopener">How to export “fat” Cocoa Touch Framework (for Simulator and Device)?</a></p>]]></content>
+    <content type="html"><![CDATA[<ol><li><p>创建一个 Framework 的 target，将需要的所有文件拖入 target 中</p></li><li><p>先将目标设备选为真机，build，然后在 product 里找到打好的 framework</p></li><li><p>再将目标设备选为模拟器，build，然后在 product 里找到打好的 framework</p></li><li><p>执行 lipo 命令</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lipo -create '真机版 frameworkd 的露囧' '模拟器版 framework 的路径' -output '新的framework的名称'</span><br></pre></td></tr></table></figure><p>生成的新 framework 就同时支持真机和模拟器架构了~</p></li></ol><p>相关资料：</p><p><a href="https://stackoverflow.com/questions/29634466/how-to-export-fat-cocoa-touch-framework-for-simulator-and-device" target="_blank" rel="noopener">How to export “fat” Cocoa Touch Framework (for Simulator and Device)?</a></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;如何打出同时支持真机和模拟器的-Framework&quot;&gt;&lt;a href=&quot;#如何打出同时支持真机和模拟器的-Framework&quot; class=&quot;headerlink&quot; title=&quot;如何打出同时支持真机和模拟器的 Framework&quot;&gt;&lt;/a&gt;如何打出同时支持真机和
+        &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;创建一个 Framework 的 target，将需要的所有文件拖入 target 中&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;先将目标设备选为真机，build，然后在 product 里找到打好的 framework&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;再将目标
       
     
     </summary>
