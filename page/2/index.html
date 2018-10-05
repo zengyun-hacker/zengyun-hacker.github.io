@@ -194,8 +194,10 @@
 </head>
 
     
+        <body class="home-body">
     
-<header class="header">
+    
+<header class="header index-header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
@@ -213,21 +215,34 @@
 
 
 
+height:50vh;
+
 >
     
     <!-- 主页  -->
+    
+    
+    <!-- 文章页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/index-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
+            Du's Time
+            <!-- 文章页  -->
+            
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
+            
+            
+                Code, Thinking or maybe something else
+            
+            <!-- 文章页  -->
             
         </p>
         <!-- 文章页meta -->
@@ -339,72 +354,26 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2018/10/05/如何学英语/" >
+        <a class="abstract-title" href = "/2016/02/29/溢出无处不在/" >
             
-                <span>如何学英语</span>
+                <span>溢出无处不在</span>
         </a>
         <div class="abstract-content">
-            单词的重要性单词是英语的基石，词汇量即一切。词汇量太少听说读写不管干什么都会卡住，词汇量上去了听说读写稍微突击一下便可突飞猛进。
-嗯。说到这里可以去这个地址测一下词汇量。
-那么如何提升词汇量呢。基本上有以下两种方法
-
-背单词。没错这是个非常笨的方法，特别枯燥特别吃力而且对记忆力差的人不友好，因此很多教程不提倡被单词。但这的确是提升词汇量最直接的方法，忍住痛苦认真撸完一本单词书，保证内力大增。另外要记住背单词只是速成，背好的单词都是死的，不多听多说多读多写，把记住的单词运用出来，就不算神功大成。
-从听说读写等日常中提升词汇量。这种方法抛弃了死记硬背，有了情景上下文单词理解起来的确能更深刻。...
+            # 
+最近需要做个随机数，一般随机数不都是用时间戳作种子然后生成嘛，于是迅速写下以下代码
+1234567//取当前时间NSTimeInterval currentTime = [[NSDate date] timeIntervalSince1970];//将时间戳的精度取到毫秒级，减少种子雷同的概率NSTimeInterval timeStamp = (long)(currentTime * 1000);//srand要求timesrand((unsigned int)timeStamp);NSInteger randomNumber = rand();
+代码愉快地上线之后，居然有1/5...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/10/05</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "英语">英语</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/09/15/build-fat-framework/" >
-            
-                <span>如何打出同时支持真机和模拟器的 Framework</span>
-        </a>
-        <div class="abstract-content">
-            
-创建一个 Framework 的 target，将需要的所有文件拖入 target 中
-
-先将目标设备选为真机，build，然后在 product 里找到打好的 framework
-
-再将目标设备选为模拟器，build，然后在 product 里找到打好的 framework
-
-执行 lipo 命令
-1lipo -create '真机版 frameworkd 的露囧' '模拟器版 framework 的路径' -output '新的framework的名称'
-生成的新 framework 就同时支持真机和模拟器架构了~
-
-
-相关资料：
-How to export “fat” Cocoa...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/09/15</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/02/29</span>
             </div>
             <!-- tags  -->
             
             <div class= abstract-tags >
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "iOS">iOS</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "编译">编译</a>
     
 </div>
             
@@ -413,8 +382,79 @@ How to export “fat” Cocoa...
     
     <!-- paginator  -->
     
+    <nav class="page-nav">
+        <a class="extend prev" rel="prev" href="/">&#60; PREV</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    </nav>
+    
 </main>
             <!-- profile -->
+            
+            <div class="profile">
+    <img class="profile-avatar" src= https://avatars2.githubusercontent.com/u/1861712?s=460&v=4 >
+    <div class="profile-name">Du</div>
+    
+    <div class="profile-signature">
+        Hacker, Curious about the world
+    </div>
+    
+    
+    <div class="profile-social">
+        
+    
+        
+            
+                <a href="mailto:zengyun.hacker@gmail.com" class="iconfont-archer email" title=email ></a>
+            
+        
+    
+        
+            
+                <a href="https://github.com/zengyun-hacker" class="iconfont-archer github" target="_blank" title=github></a>
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            
+                <a href="https://twitter.com/zengyun_du" class="iconfont-archer twitter" target="_blank" title=twitter></a>
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            
+                <a href="/atom.xml" class="iconfont-archer rss" target="_blank" title=rss></a>
+            
+        
+    
+
+    </div>
+    
+    
+    
+</div>
             
         </div>
         <footer class="footer footer-unloaded">

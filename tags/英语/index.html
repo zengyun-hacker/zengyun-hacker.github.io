@@ -367,50 +367,6 @@
         </div>
     </article>
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/09/15/build-fat-framework/" >
-            
-                <span>如何打出同时支持真机和模拟器的 Framework</span>
-        </a>
-        <div class="abstract-content">
-            
-创建一个 Framework 的 target，将需要的所有文件拖入 target 中
-
-先将目标设备选为真机，build，然后在 product 里找到打好的 framework
-
-再将目标设备选为模拟器，build，然后在 product 里找到打好的 framework
-
-执行 lipo 命令
-1lipo -create '真机版 frameworkd 的露囧' '模拟器版 framework 的路径' -output '新的framework的名称'
-生成的新 framework 就同时支持真机和模拟器架构了~
-
-
-相关资料：
-How to export “fat” Cocoa...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/09/15</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "iOS">iOS</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "编译">编译</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
     <!-- paginator  -->
     
 </main>
