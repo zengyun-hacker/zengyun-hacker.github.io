@@ -339,202 +339,33 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2018/09/15/build-fat-framework/" >
+        <a class="abstract-title" href = "/2020/06/24/Github加速/" >
             
-                <span>如何打出同时支持真机和模拟器的 Framework</span>
+                <span>Github 加速</span>
         </a>
         <div class="abstract-content">
-            
-创建一个 Framework 的 target，将需要的所有文件拖入 target 中
+            Github 加速Github 由于众所周知的原因访问速度非常慢，现有的 Github 加速的方式有以下几种：
 
-先将目标设备选为真机，build，然后在 product 里找到打好的 framework
+绑 hosts 手动映射 DNS
+手动修改 DNS 服务器
+使用代理进行 Github 相关操作
 
-再将目标设备选为模拟器，build，然后在 product 里找到打好的 framework
-
-执行 lipo 命令
-1lipo -create '真机版 frameworkd 的露囧' '模拟器版 framework 的路径' -output '新的framework的名称'
-生成的新 framework 就同时支持真机和模拟器架构了~
-
-
-相关资料：
-How to export “fat” Cocoa...
+由于方法1和方法2都存在不确定性，本文介绍的是第三种方法
+Github HTTP 代理在命令行中执行
+1git config --global http.https://github.com.proxy socks5://127.0.0.1:1080	#端口号根据自己的实际情况设置
+设置完成后，~/.gitconfig 中会增加一行
+1[http "https://github...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/09/15</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/24</span>
             </div>
             <!-- tags  -->
             
             <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "iOS">iOS</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "编译">编译</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2017/08/16/使用iOS 10.3 新 API 给 app 更换 icon/" >
-            
-                <span>使用 iOS 10.3 新 API 给 app 更换 icon</span>
-        </a>
-        <div class="abstract-content">
-            iOS 10.3 出来好长一段时间了，其中有一个换 icon 的 API setAlternateIconName 感觉挺好玩的一直想试一把。实验结果如下。
-
-首先准备好几个icon，根据苹果爸爸的要求，icon 2x 图尺寸为 120x120，3x 图尺寸为 180x180。
-把这几个 icon 拖到工程中，这里有几个注意点：
-
-图片直接当做资源拖到工程中，不要放到Assets里
-如果之前app的icon是用Assets管理的，把Assets里的AppIcon删掉，并把 Target -&gt; General -&gt; App Icons and Launch Images 里的 ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/08/16</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "iOS">iOS</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "开发">开发</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2017/03/08/如何获取UIWebView请求时的HTTP状态码/" >
-            
-                <span>如何获取UIWebView请求时的HTTP状态码</span>
-        </a>
-        <div class="abstract-content">
-            有时我们需要向前端一样为请求错误的UIWebView界面添加更好看的本地错误提示，这就需要获取到UIWebView请求网页的HTTP状态码，基本思路是在webView请求结束后获取到缓存中的response，再根据response的statusCode进行判断，因此截获操作应该在UIWebViewDelegate中的webViewDidFinishLoad方法中进行
-12345678910- (void)webViewDidFinishLoad:(UIWebView *)webView&#123;	...	//获取status code	NSHTTPURLResponse *respon...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/03/08</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "iOS">iOS</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2017/01/29/Taptic Engine初探/" >
-            
-                <span>Taptic Engine初探</span>
-        </a>
-        <div class="abstract-content">
-            
-感谢组织过年借我只iPhone 7P，赶紧呈上一篇Taptic Engine报答组织
-
-简述Taptic Engine 是苹果的触觉反馈技术，其中Taptic演变自Haptic，即触觉。Taptic Engine目前已经应用在苹果全线设备中。它让Apple Watch震动时有手腕被人拍了一下的感觉。让MacBook触摸板有以假乱真的触感（Force Touch）。而在iPhone上，除了实现了3D Touch让屏幕多了一维交互外，还实现了虚拟Home键的反馈效果，甚至还提供了一套Taptic API供开发者实现自己的震动反馈。
-何时使用触摸反馈为了保证所有app体验的一致性，苹果总结了...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/01/29</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "iOS">iOS</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2016/06/15/FBSimulatorControl_2016_06_15/" >
-            
-                <span>使用FBSimulatorControl做模拟器适配测试</span>
-        </a>
-        <div class="abstract-content">
-            作为一只iOS狗，虽然需要适配的屏幕有限，但每次适配自测的时候都挨个去启动N个模拟器也是很心塞。放狗搜到Facebook爸爸在15年的时候就搞了个FBSimulatorControl库支持同时启动多个模拟器，鉴于网上中文配置FBSimulatorControl的教程比较少。于是将自己的探索过程记录一下。
-安装FBSimulatorControl小工具首先要加入Facebook Tap1brew tap facebook/fb
-然后正常brew安装就行1brew install fbsimctl --HEAD
-启动多个模拟器首先先看看自己有哪些模拟器，执行fbsimctl list查看自己...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/06/15</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "iOS">iOS</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2016/02/29/溢出无处不在/" >
-            
-                <span>溢出无处不在</span>
-        </a>
-        <div class="abstract-content">
-            # 
-最近需要做个随机数，一般随机数不都是用时间戳作种子然后生成嘛，于是迅速写下以下代码
-1234567//取当前时间NSTimeInterval currentTime = [[NSDate date] timeIntervalSince1970];//将时间戳的精度取到毫秒级，减少种子雷同的概率NSTimeInterval timeStamp = (long)(currentTime * 1000);//srand要求timesrand((unsigned int)timeStamp);NSInteger randomNumber = rand();
-代码愉快地上线之后，居然有1/5...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/02/29</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "iOS">iOS</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "科学上网">科学上网</a>
     
 </div>
             

@@ -5,9 +5,9 @@
   <subtitle>Coding, thinking and maybe something else</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://codingtime.me/"/>
-  <updated>2018-10-07T06:14:07.721Z</updated>
-  <id>http://codingtime.me/</id>
+  <link href="http://duz.life/"/>
+  <updated>2020-06-23T17:46:34.602Z</updated>
+  <id>http://duz.life/</id>
   
   <author>
     <name>Du</name>
@@ -17,11 +17,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Github 加速</title>
+    <link href="http://duz.life/2020/06/24/Github%E5%8A%A0%E9%80%9F/"/>
+    <id>http://duz.life/2020/06/24/Github加速/</id>
+    <published>2020-06-23T17:45:34.813Z</published>
+    <updated>2020-06-23T17:46:34.602Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Github-加速"><a href="#Github-加速" class="headerlink" title="Github 加速"></a>Github 加速</h1><p>Github 由于众所周知的原因访问速度非常慢，现有的 Github 加速的方式有以下几种：</p><ul><li>绑 hosts 手动映射 DNS</li><li>手动修改 DNS 服务器</li><li>使用代理进行 Github 相关操作</li></ul><p>由于方法1和方法2都存在不确定性，本文介绍的是第三种方法</p><h2 id="Github-HTTP-代理"><a href="#Github-HTTP-代理" class="headerlink" title="Github HTTP 代理"></a>Github HTTP 代理</h2><p>在命令行中执行</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.https://github.com.proxy socks5://127.0.0.1:1080#端口号根据自己的实际情况设置</span><br></pre></td></tr></table></figure><p>设置完成后，<code>~/.gitconfig</code> 中会增加一行</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[http "https://github.com"]  proxy = socks5://127.0.0.1:1080</span><br></pre></td></tr></table></figure><p>如果想取消代理，执行</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global --unset http.https://github.com.proxy</span><br></pre></td></tr></table></figure><p>即可</p><h3 id="Github-SSH-代理"><a href="#Github-SSH-代理" class="headerlink" title="Github SSH 代理"></a>Github SSH 代理</h3><p>修改 <code>~/.ssh/config</code> 文件，设置代理</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Host github.com  User git  ProxyCommand nc -v -x 127.0.0.1:1080 %h %p #端口号请根据实际情况自行调整</span><br></pre></td></tr></table></figure><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>本文参考自<br><a href="https://github.com/chenxuhua/issues-blog/issues/3" target="_blank" rel="noopener">https://github.com/chenxuhua/issues-blog/issues/3</a></p><p>一些有用的镜像网站<br>阿里源：<a href="https://developer.aliyun.com/mirror/" target="_blank" rel="noopener">https://developer.aliyun.com/mirror/</a><br>清华源：<a href="https://mirrors.tuna.tsinghua.edu.cn/" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/</a><br>华为源：<a href="https://mirrors.huaweicloud.com/" target="_blank" rel="noopener">https://mirrors.huaweicloud.com/</a><br>中科大源：<a href="http://mirrors.ustc.edu.cn/" target="_blank" rel="noopener">http://mirrors.ustc.edu.cn/</a><br>网易源：<a href="http://mirrors.163.com/" target="_blank" rel="noopener">http://mirrors.163.com/</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Github-加速&quot;&gt;&lt;a href=&quot;#Github-加速&quot; class=&quot;headerlink&quot; title=&quot;Github 加速&quot;&gt;&lt;/a&gt;Github 加速&lt;/h1&gt;&lt;p&gt;Github 由于众所周知的原因访问速度非常慢，现有的 Github 加速的方式有以
+      
+    
+    </summary>
+    
+      <category term="其他" scheme="http://duz.life/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    
+      <category term="科学上网" scheme="http://duz.life/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
+    
+  </entry>
+  
+  <entry>
     <title>如何学英语</title>
-    <link href="http://codingtime.me/2018/10/06/%E5%A6%82%E4%BD%95%E5%AD%A6%E8%8B%B1%E8%AF%AD/"/>
-    <id>http://codingtime.me/2018/10/06/如何学英语/</id>
-    <published>2018-10-05T16:13:12.000Z</published>
-    <updated>2018-10-07T06:14:07.721Z</updated>
+    <link href="http://duz.life/2018/10/07/%E5%A6%82%E4%BD%95%E5%AD%A6%E8%8B%B1%E8%AF%AD/"/>
+    <id>http://duz.life/2018/10/07/如何学英语/</id>
+    <published>2018-10-07T06:14:07.000Z</published>
+    <updated>2018-10-07T06:14:07.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="单词的重要性"><a href="#单词的重要性" class="headerlink" title="单词的重要性"></a>单词的重要性</h2><p>单词是英语的基石，词汇量即一切。词汇量太少听说读写不管干什么都会卡住，词汇量上去了听说读写稍微突击一下便可突飞猛进。</p><p>嗯。说到这里可以去<a href="http://testyourvocab.com" target="_blank" rel="noopener">这个地址</a>测一下词汇量。</p><p>那么如何提升词汇量呢。基本上有以下两种方法</p><ol><li>背单词。没错这是个非常笨的方法，特别枯燥特别吃力而且对记忆力差的人不友好，因此很多教程不提倡被单词。但这的确是提升词汇量最直接的方法，忍住痛苦认真撸完一本单词书，保证内力大增。另外要记住背单词只是速成，背好的单词都是死的，不多听多说多读多写，把记住的单词运用出来，就不算神功大成。</li><li>从听说读写等日常中提升词汇量。这种方法抛弃了死记硬背，有了情景上下文单词理解起来的确能更深刻。但这并不意味着就没有痛苦，你需要把听说读写中遇到的所有生词一一记下来并反复弄懂，所需要的毅力和汗水一点儿也不必死记硬背单词少。</li></ol><h2 id="如何学英语"><a href="#如何学英语" class="headerlink" title="如何学英语"></a>如何学英语</h2><p>学英语的姿势还是从传统的听说读写四方面来分析</p><h3 id="听"><a href="#听" class="headerlink" title="听"></a>听</h3><ol><li>搞定慢速英语听力。认真听完 ESLPOD 中 Using English At Work、Interview Questions、English For Business Meetings 三章。听的时候要注意<ol><li>先不要看教材，把原文听一遍，并将听到的原文听写下来</li><li>反复听教材，对照原文和听写内容，将没听清的生词搞定</li><li>丢开课本，播一句 ESLPOD 跟读一句</li><li>翻开课本，不暂停，跟着录音反复朗读，要达到一气呵成</li><li>丢开课本，不暂停，跟着录音反复朗读，同样要达到一气呵成</li><li>朗读时注意复习，使用艾宾浩斯记忆法回顾旧的文章</li><li>把自己读的还不错的文章录下来，反复听原文和录音，比较出不同之后再反复录音，直到差不多之后再听下一个</li></ol></li><li>搞定常速英语听力。将 EnglishPod 听熟<ol><li>拿到一课的内容，首先听1~2遍讲解录音，直到打开听懂就 OK</li><li>听讲解时注意做笔记，将生词记下来，找零碎时间记忆</li><li>听9遍左右1分钟的对话录音</li><li>跟读对话录音，读的时候不要跟读个体的发音，而是用哼唱的方式，跟读语调，把录音当作一种音乐</li><li>看着文本跟读3~4遍，然后不看文本跟读，不停顿一口气跟读9遍</li><li>听了一周或者一段时间之后，从听出来的课文中挑选出一期最喜欢的，用手机录音。录音时尽量不要停顿，回想会话的场景和语气，做到栩栩如生</li><li>把原因和录音的次序打乱，插播9次，如果不满意则反复录音改进，直到满意为止</li></ol></li><li>如果觉得听文章无聊可以用<a href="https://www.shanbay.com/listen/books/all/1" target="_blank" rel="noopener">扇贝听力</a>来调剂，有工具的帮忙没有那么枯燥些。找一个教程，如 VOA 或者 BBC，在扇贝听力里反复弄懂，并将生词放到扇贝单词里背熟，最后保证所有的句子都能听写出来。</li></ol><h3 id="说"><a href="#说" class="headerlink" title="说"></a>说</h3><ol><li>搞定发音<ol><li>先撸一遍 <a href="https://www.amazon.cn/dp/B00ISQ2DVC/ref=sr_1_1?ie=UTF8&amp;qid=1538750438&amp;sr=8-1&amp;keywords=%E8%B5%96%E4%B8%96%E9%9B%84%E7%BE%8E%E8%AF%AD%E9%9F%B3%E6%A0%87" target="_blank" rel="noopener">《赖世雄美语音标》</a>。音频资源网上到处都有，不过纸质书也不贵，推荐买一本对照着听比较方便</li><li>读完美国发音教程 American Pronunciation Workshop</li><li>读完标准美语发音的13秘诀<ol><li>扫一下目录，了解书的结构，然后从头到尾通读几遍</li><li>一边看书一边听CD，把书从头到尾反复听几遍</li><li>做每个章节的习题</li></ol></li></ol></li><li>说<ol><li>说的注意点主要还是“不要脸”，搞定了发音，剩下的就是不要羞涩拼命地说就行了</li><li>尽可能地多给自己创造说的机会，找熟人说、找所有可能说英语的人说，甚至可以尝试微信语音</li></ol></li></ol><h3 id="读"><a href="#读" class="headerlink" title="读"></a>读</h3><ol><li><p>阅读之前先搞定语法。对没错语法就是那个大家深恶痛绝觉得无比应试教育的东西。有一种说法是语法不用学多看书多看报语感就慢慢积累了，这样说也是没错，但是就是慢，而且短句子靠语感可以但是遇到长难句还是容易懵逼。所以如果抛开应试教育死记硬背那一套，语法其实是对语境和句式的归纳总结，熟悉语法能让你在遇到复杂句子时更方便地作出分析，更快领会原文意思。</p><p>要学好语法的话可以看看 《语法俱乐部》，或者 《英语在用》，认真看完一本语法书然后好好做好笔记。</p></li><li><p>挑自己喜欢的原著开始阅读。具体读什么就因人而异看自己兴趣了。读的方法可以参考以下</p><ul><li>每天40页，坚持7天</li><li>读跟自己能力相匹配的书</li><li>为了不让查单词的操作影响自己的阅读节奏，顺便提高一下猜词能力。每2页查一个生词，并将生词记录起来</li><li>每天早起用5分钟将前一天的生词过一遍，复习时间不超过5分钟</li><li>翻页之前绝对不做其他事情</li><li>承诺一年读10本原著</li><li>每读完一本就写透析记录</li></ul></li><li><p>建议一年读完10本原著</p></li></ol><h3 id="写"><a href="#写" class="headerlink" title="写"></a>写</h3><p>写作的锻炼应该放到最后，这个操作需要词汇量、语法和语感的多重积累才能游刃有余。因此在锻炼写作之前，大量阅读是必不可少的，先把“读”这一步做好，打好基础之后才能修行“写”的心法。</p><p>写作的锻炼可以按以下步骤走：</p><ol><li>拿出身边可以找到的双语材料，比如 <a href="http://www.ftchinese.com/" target="_blank" rel="noopener">FT 中文网</a> ，先看一遍中文，再试着将中文翻译成英文</li><li>拿自己翻译的英文和原文反复比较，揣摩词语和句子，把自己的翻译改到满意为止</li></ol><p>如果不喜欢 FT 中文网，可以找一些自己感兴趣的英文文章，先自己翻译成中文然后再自己翻译回英文，翻译时反复揣摩比较，也能达到效果。</p><p>以上就是学习英语的方法啦。虽然说听说读写提高的方法各异，但共同点都是需要耐心和毅力。学好英语并不是一件简单的事，如果没有做好持久的准备，很容易半途而废功亏一篑哒~</p><p>PS：以上听说读的学习方法主要出自<a href="https://book.douban.com/subject/3748247/" target="_blank" rel="noopener">《把你的英语用起来！》</a> 。奶爸的学习方式非常可取，于是我就大着胆子拾人牙慧了，若有侵权请告知。</p>]]></content>
     
@@ -34,17 +59,17 @@
     
     </summary>
     
-      <category term="其他" scheme="http://codingtime.me/categories/%E5%85%B6%E4%BB%96/"/>
+      <category term="其他" scheme="http://duz.life/categories/%E5%85%B6%E4%BB%96/"/>
     
     
-      <category term="英语" scheme="http://codingtime.me/tags/%E8%8B%B1%E8%AF%AD/"/>
+      <category term="英语" scheme="http://duz.life/tags/%E8%8B%B1%E8%AF%AD/"/>
     
   </entry>
   
   <entry>
     <title>如何打出同时支持真机和模拟器的 Framework</title>
-    <link href="http://codingtime.me/2018/09/15/build-fat-framework/"/>
-    <id>http://codingtime.me/2018/09/15/build-fat-framework/</id>
+    <link href="http://duz.life/2018/09/15/build-fat-framework/"/>
+    <id>http://duz.life/2018/09/15/build-fat-framework/</id>
     <published>2018-09-15T11:54:36.000Z</published>
     <updated>2018-09-15T12:05:27.000Z</updated>
     
@@ -64,19 +89,19 @@
     
     </summary>
     
-      <category term="iOS" scheme="http://codingtime.me/categories/iOS/"/>
+      <category term="iOS" scheme="http://duz.life/categories/iOS/"/>
     
     
-      <category term="iOS" scheme="http://codingtime.me/tags/iOS/"/>
+      <category term="iOS" scheme="http://duz.life/tags/iOS/"/>
     
-      <category term="编译" scheme="http://codingtime.me/tags/%E7%BC%96%E8%AF%91/"/>
+      <category term="编译" scheme="http://duz.life/tags/%E7%BC%96%E8%AF%91/"/>
     
   </entry>
   
   <entry>
     <title>使用 iOS 10.3 新 API 给 app 更换 icon</title>
-    <link href="http://codingtime.me/2017/08/16/%E4%BD%BF%E7%94%A8iOS%2010.3%20%E6%96%B0%20API%20%E7%BB%99%20app%20%E6%9B%B4%E6%8D%A2%20icon/"/>
-    <id>http://codingtime.me/2017/08/16/使用iOS 10.3 新 API 给 app 更换 icon/</id>
+    <link href="http://duz.life/2017/08/16/%E4%BD%BF%E7%94%A8iOS%2010.3%20%E6%96%B0%20API%20%E7%BB%99%20app%20%E6%9B%B4%E6%8D%A2%20icon/"/>
+    <id>http://duz.life/2017/08/16/使用iOS 10.3 新 API 给 app 更换 icon/</id>
     <published>2017-08-16T15:26:58.000Z</published>
     <updated>2018-09-15T12:07:11.000Z</updated>
     
@@ -93,19 +118,19 @@
     
     </summary>
     
-      <category term="iOS" scheme="http://codingtime.me/categories/iOS/"/>
+      <category term="iOS" scheme="http://duz.life/categories/iOS/"/>
     
     
-      <category term="iOS" scheme="http://codingtime.me/tags/iOS/"/>
+      <category term="iOS" scheme="http://duz.life/tags/iOS/"/>
     
-      <category term="开发" scheme="http://codingtime.me/tags/%E5%BC%80%E5%8F%91/"/>
+      <category term="开发" scheme="http://duz.life/tags/%E5%BC%80%E5%8F%91/"/>
     
   </entry>
   
   <entry>
     <title>如何获取UIWebView请求时的HTTP状态码</title>
-    <link href="http://codingtime.me/2017/03/08/%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96UIWebView%E8%AF%B7%E6%B1%82%E6%97%B6%E7%9A%84HTTP%E7%8A%B6%E6%80%81%E7%A0%81/"/>
-    <id>http://codingtime.me/2017/03/08/如何获取UIWebView请求时的HTTP状态码/</id>
+    <link href="http://duz.life/2017/03/08/%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96UIWebView%E8%AF%B7%E6%B1%82%E6%97%B6%E7%9A%84HTTP%E7%8A%B6%E6%80%81%E7%A0%81/"/>
+    <id>http://duz.life/2017/03/08/如何获取UIWebView请求时的HTTP状态码/</id>
     <published>2017-03-08T09:53:00.000Z</published>
     <updated>2018-09-15T12:07:22.000Z</updated>
     
@@ -120,17 +145,17 @@
     
     </summary>
     
-      <category term="iOS" scheme="http://codingtime.me/categories/iOS/"/>
+      <category term="iOS" scheme="http://duz.life/categories/iOS/"/>
     
     
-      <category term="iOS" scheme="http://codingtime.me/tags/iOS/"/>
+      <category term="iOS" scheme="http://duz.life/tags/iOS/"/>
     
   </entry>
   
   <entry>
     <title>Taptic Engine初探</title>
-    <link href="http://codingtime.me/2017/01/29/Taptic%20Engine%E5%88%9D%E6%8E%A2/"/>
-    <id>http://codingtime.me/2017/01/29/Taptic Engine初探/</id>
+    <link href="http://duz.life/2017/01/29/Taptic%20Engine%E5%88%9D%E6%8E%A2/"/>
+    <id>http://duz.life/2017/01/29/Taptic Engine初探/</id>
     <published>2017-01-29T09:53:00.000Z</published>
     <updated>2018-09-15T12:05:10.000Z</updated>
     
@@ -148,17 +173,17 @@
     
     </summary>
     
-      <category term="iOS" scheme="http://codingtime.me/categories/iOS/"/>
+      <category term="iOS" scheme="http://duz.life/categories/iOS/"/>
     
     
-      <category term="iOS" scheme="http://codingtime.me/tags/iOS/"/>
+      <category term="iOS" scheme="http://duz.life/tags/iOS/"/>
     
   </entry>
   
   <entry>
     <title>weak变量性能低的原因</title>
-    <link href="http://codingtime.me/2016/07/02/weak%E5%8F%98%E9%87%8F%E6%80%A7%E8%83%BD%E4%BD%8E%E7%9A%84%E5%8E%9F%E5%9B%A0/"/>
-    <id>http://codingtime.me/2016/07/02/weak变量性能低的原因/</id>
+    <link href="http://duz.life/2016/07/02/weak%E5%8F%98%E9%87%8F%E6%80%A7%E8%83%BD%E4%BD%8E%E7%9A%84%E5%8E%9F%E5%9B%A0/"/>
+    <id>http://duz.life/2016/07/02/weak变量性能低的原因/</id>
     <published>2016-07-01T16:06:00.000Z</published>
     <updated>2018-09-15T12:07:04.000Z</updated>
     
@@ -176,19 +201,19 @@
     
     </summary>
     
-      <category term="Objective-C" scheme="http://codingtime.me/categories/Objective-C/"/>
+      <category term="Objective-C" scheme="http://duz.life/categories/Objective-C/"/>
     
     
-      <category term="iOS" scheme="http://codingtime.me/tags/iOS/"/>
+      <category term="iOS" scheme="http://duz.life/tags/iOS/"/>
     
-      <category term="Objective-C" scheme="http://codingtime.me/tags/Objective-C/"/>
+      <category term="Objective-C" scheme="http://duz.life/tags/Objective-C/"/>
     
   </entry>
   
   <entry>
     <title>weak-strong dance的另外一种解释</title>
-    <link href="http://codingtime.me/2016/07/01/weak-strong%20dance%E7%9A%84%E5%8F%A6%E5%A4%96%E4%B8%80%E7%A7%8D%E8%A7%A3%E9%87%8A/"/>
-    <id>http://codingtime.me/2016/07/01/weak-strong dance的另外一种解释/</id>
+    <link href="http://duz.life/2016/07/01/weak-strong%20dance%E7%9A%84%E5%8F%A6%E5%A4%96%E4%B8%80%E7%A7%8D%E8%A7%A3%E9%87%8A/"/>
+    <id>http://duz.life/2016/07/01/weak-strong dance的另外一种解释/</id>
     <published>2016-07-01T15:32:00.000Z</published>
     <updated>2018-09-15T12:06:55.000Z</updated>
     
@@ -203,19 +228,19 @@
     
     </summary>
     
-      <category term="Objective-C" scheme="http://codingtime.me/categories/Objective-C/"/>
+      <category term="Objective-C" scheme="http://duz.life/categories/Objective-C/"/>
     
     
-      <category term="iOS" scheme="http://codingtime.me/tags/iOS/"/>
+      <category term="iOS" scheme="http://duz.life/tags/iOS/"/>
     
-      <category term="Objective-C" scheme="http://codingtime.me/tags/Objective-C/"/>
+      <category term="Objective-C" scheme="http://duz.life/tags/Objective-C/"/>
     
   </entry>
   
   <entry>
     <title>macOS 配置手册</title>
-    <link href="http://codingtime.me/2016/06/28/mac%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90/"/>
-    <id>http://codingtime.me/2016/06/28/mac工具推荐/</id>
+    <link href="http://duz.life/2016/06/28/mac%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90/"/>
+    <id>http://duz.life/2016/06/28/mac工具推荐/</id>
     <published>2016-06-28T09:53:00.000Z</published>
     <updated>2018-09-15T12:04:34.000Z</updated>
     
@@ -230,17 +255,17 @@
     
     </summary>
     
-      <category term="Tech" scheme="http://codingtime.me/categories/Tech/"/>
+      <category term="Tech" scheme="http://duz.life/categories/Tech/"/>
     
     
-      <category term="macOS" scheme="http://codingtime.me/tags/macOS/"/>
+      <category term="macOS" scheme="http://duz.life/tags/macOS/"/>
     
   </entry>
   
   <entry>
     <title>使用FBSimulatorControl做模拟器适配测试</title>
-    <link href="http://codingtime.me/2016/06/15/FBSimulatorControl_2016_06_15/"/>
-    <id>http://codingtime.me/2016/06/15/FBSimulatorControl_2016_06_15/</id>
+    <link href="http://duz.life/2016/06/15/FBSimulatorControl_2016_06_15/"/>
+    <id>http://duz.life/2016/06/15/FBSimulatorControl_2016_06_15/</id>
     <published>2016-06-15T15:26:58.000Z</published>
     <updated>2018-09-15T12:05:18.000Z</updated>
     
@@ -255,17 +280,17 @@
     
     </summary>
     
-      <category term="iOS" scheme="http://codingtime.me/categories/iOS/"/>
+      <category term="iOS" scheme="http://duz.life/categories/iOS/"/>
     
     
-      <category term="iOS" scheme="http://codingtime.me/tags/iOS/"/>
+      <category term="iOS" scheme="http://duz.life/tags/iOS/"/>
     
   </entry>
   
   <entry>
     <title>view controller 与 view 依赖关系探讨</title>
-    <link href="http://codingtime.me/2016/03/22/view%20controller%20%E4%B8%8E%20view%20%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB%E6%8E%A2%E8%AE%A8/"/>
-    <id>http://codingtime.me/2016/03/22/view controller 与 view 依赖关系探讨/</id>
+    <link href="http://duz.life/2016/03/22/view%20controller%20%E4%B8%8E%20view%20%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB%E6%8E%A2%E8%AE%A8/"/>
+    <id>http://duz.life/2016/03/22/view controller 与 view 依赖关系探讨/</id>
     <published>2016-03-22T09:53:00.000Z</published>
     <updated>2018-09-15T12:06:43.000Z</updated>
     
@@ -281,17 +306,17 @@
     
     </summary>
     
-      <category term="Objective-C" scheme="http://codingtime.me/categories/Objective-C/"/>
+      <category term="Objective-C" scheme="http://duz.life/categories/Objective-C/"/>
     
     
-      <category term="iOS" scheme="http://codingtime.me/tags/iOS/"/>
+      <category term="iOS" scheme="http://duz.life/tags/iOS/"/>
     
   </entry>
   
   <entry>
     <title>溢出无处不在</title>
-    <link href="http://codingtime.me/2016/02/29/%E6%BA%A2%E5%87%BA%E6%97%A0%E5%A4%84%E4%B8%8D%E5%9C%A8/"/>
-    <id>http://codingtime.me/2016/02/29/溢出无处不在/</id>
+    <link href="http://duz.life/2016/02/29/%E6%BA%A2%E5%87%BA%E6%97%A0%E5%A4%84%E4%B8%8D%E5%9C%A8/"/>
+    <id>http://duz.life/2016/02/29/溢出无处不在/</id>
     <published>2016-02-29T09:53:00.000Z</published>
     <updated>2018-09-15T12:07:31.000Z</updated>
     
@@ -308,10 +333,10 @@
     
     </summary>
     
-      <category term="iOS" scheme="http://codingtime.me/categories/iOS/"/>
+      <category term="iOS" scheme="http://duz.life/categories/iOS/"/>
     
     
-      <category term="iOS" scheme="http://codingtime.me/tags/iOS/"/>
+      <category term="iOS" scheme="http://duz.life/tags/iOS/"/>
     
   </entry>
   
